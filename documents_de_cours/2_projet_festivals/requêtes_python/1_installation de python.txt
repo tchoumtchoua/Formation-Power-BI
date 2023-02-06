@@ -1,0 +1,5 @@
+import pip
+pip.main(['install', 'requests'])
+pip.main(['install', 'pandas'])
+pip.main(['install', 'matplotlib'])
+pip.main(['install','seaborn'])

@@ -1,0 +1,8 @@
+import json
+import pandas as pd
+
+with closing(urlopen('https://api.meteo-concept.com/api/observations/around?token=ca603ac37d0dd6243878273d3ba6b55db93ae918a4875ff151c43167f195a6a7&insee=35238&radius=50')) as f:
+    decoded = json.loads(f.read())
+
+data = pd.json_normalize(decoded)
+data

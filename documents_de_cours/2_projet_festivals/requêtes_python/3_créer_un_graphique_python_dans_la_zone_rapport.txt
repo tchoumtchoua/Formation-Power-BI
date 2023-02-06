@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_theme(style="whitegrid")
+
+# Draw a nested violinplot and split the violins for easier comparison
+sns.violinplot(data=dataset, x="Domaine", y="2018",
+               split=True, inner="quart", linewidth=1)
+sns.despine(left=True)
+plt.xticks(rotation=45)
+plt.show()
